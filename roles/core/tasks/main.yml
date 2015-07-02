@@ -1,0 +1,20 @@
+- name: Core NGINX deploy
+  docker:
+    image: quay.io/icemobile/lp-core-nginx:aws_migration
+    name: corenginx
+    pull: always
+    state: reloaded
+    expose:
+        - 8080
+    ports:
+        "8080:8080"
+
+- name: Core API deploy
+  docker:
+    image: quay.io/icemobile/lp-core-api:aws_migration
+    name: coreapi
+    pull: always
+    state: reloaded
+    net: "container:corenginx"
+    env:
+        NODE_ENV: "{{ env }}"
