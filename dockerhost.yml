@@ -1,4 +1,4 @@
-- hosts: tag_aws_autoscaling_groupName_autoscale-blog
+- hosts: tag_aws_autoscaling_groupName_autoscale-docker
   sudo: yes
   roles:
   - dockerhost
