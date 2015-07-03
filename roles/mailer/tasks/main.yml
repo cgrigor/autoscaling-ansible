@@ -1,0 +1,8 @@
+- name: pulling host details
+  command:
+- mail:
+    host='localhost'
+    port=25
+    to="Chris Grigor <chris@icemobile.com>"
+    subject='Ansible-report'
+    body='System {{ ansible_hostname }} has been successfully provisioned.'
