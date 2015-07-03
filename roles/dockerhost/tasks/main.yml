@@ -33,5 +33,8 @@
   user: name=ec2-user groups=docker append=yes
   sudo: yes
 
-- name: Adding quay.io robot login
+- name: Adding quay.io ec2 login
   copy: src=dockercfg dest=/home/ec2-user/.dockercfg owner=ec2-user
+
+- name: Adding quay.io root login
+  copy: src=dockercfg dest=/root/.dockercfg owner=ec2-user
