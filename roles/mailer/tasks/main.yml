@@ -7,7 +7,7 @@
 - mail:
     host='localhost'
     port=25
-    form='root@localhost'
+    from='root@localhost'
     to="Chris Grigor <chris@icemobile.com>"
     subject='Ansible-report'
     body='System has been successfully provisioned.'
