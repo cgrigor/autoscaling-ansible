@@ -9,4 +9,4 @@
     port=25
     to="Chris Grigor <chris@icemobile.com>"
     subject='Ansible-report'
-    body='System {{ hostvars[inventory_hostname] }} has been successfully provisioned.'
+    body='System "{{ hostvars[inventory_hostname] }}" has been successfully provisioned.'
