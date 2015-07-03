@@ -1,13 +1,8 @@
-- name: Initiate hostname lookup
-  gather_facts: False
-  connection: local
-  hosts: localhost
-  tasks:
-  - name: get hostname
-    command: /bin/hostname
-    register: prov_hostname
-  - set_fact: hostname={{prov_hostname.results[0]}}
-  - debug: var=prov_hostname
+- name: get hostname
+  command: /bin/hostname
+  register: prov_hostname
+- set_fact: hostname={{prov_hostname.results[0]}}
+- debug: var=prov_hostname
 
 
 - name: pulling host details
