@@ -1,15 +1,12 @@
-- name: get hostname
-  command: /bin/hostname
-  register: prov_hostname
-- set_fact: hostname={{prov_hostname}}
-- debug: var=prov_hostname
-
-
-- name: pulling host details
-  command:
+#- name: return hostname
+#  command: /bin/hostname
+#  register: prov_hostname
+#- set_fact: hostname={{item.stdout}}
+#  with_items: {{ prov_hostname }}
+#- debug: var=prov_hostname
 - mail:
     host='localhost'
     port=25
     to="Chris Grigor <chris@icemobile.com>"
     subject='Ansible-report'
-    body='System {{ prov_hostname }} has been successfully provisioned.'
+    body='System {{ hostvars[inventory_hostname] }} has been successfully provisioned.'
