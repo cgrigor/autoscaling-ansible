@@ -10,6 +10,8 @@
         "8080:8080"
 
 - name: Core API deploy
+  vars:
+  - env: dev
   docker:
     image: quay.io/icemobile/lp-core-api:aws_migration
     name: coreapi
