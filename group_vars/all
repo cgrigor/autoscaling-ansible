@@ -1,5 +1,1 @@
 # global vars
-# we should try not use the environment vars in this file but obtain the
-# values from aws
-platform:
-- env: dev

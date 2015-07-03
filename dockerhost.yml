@@ -1,4 +1,6 @@
 - hosts: tag_aws_autoscaling_groupName_autoscale-docker
+  vars:
+    env: dev
   sudo: yes
   roles:
   - dockerhost
